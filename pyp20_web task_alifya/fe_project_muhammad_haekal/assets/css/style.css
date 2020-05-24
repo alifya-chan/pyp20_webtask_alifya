@@ -1,0 +1,335 @@
+/* styling untuk semua bagian */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* styling pada body */
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 1000px;
+}
+
+
+
+
+/* styling untuk header */
+header {
+  background: #fff;
+  padding: 10px 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header .main-nav {
+        display: flex;
+        list-style: none;
+      }
+
+      header .main-nav .nav-item {
+        margin-right: 60px;
+        position: relative;
+      }
+
+      /* garis underline biru pada nav list item  */
+      header .main-nav .nav-item::before {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          width: 0;
+          height: 3px;
+          background: #3DB5E2;
+      }
+
+      header .main-nav .nav-item:hover::before {
+          width: 100%;
+      }
+
+      /* warna nav list item */
+      header .main-nav .nav-item a {
+          color: #000;
+      }
+
+
+      /* styling untuk teks anchor */
+      a {
+          text-decoration: none;
+      }
+
+
+
+/* styling untuk class Home */
+.home {
+  width: 100%;
+  height: 100%;
+  background: url(../img/biru.png) no-repeat;
+  background-position: 95% center;
+  background-size: cover;
+}
+
+    .home .container {
+      height: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .home .content {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+    }
+
+    .home .content h1 {
+      font-size: 48px;
+      line-height: 46px;
+      letter-spacing: 0.05em;  
+    }
+
+    .home .content p {
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      margin: 30px 0 60px 0;
+    }
+    .container .nav-brand{
+      animation: flip;
+      animation-duration: 2s;
+    }
+    .illustration{
+      animation: zoomInDown;
+    animation-duration: 10s;
+    }
+
+    .home .content .btn-secondary {
+      margin-right: 16px;
+    }
+
+
+
+/* styling untuk class container pada bagian home,header,dan What Must We Do*/
+.container {
+  width: 95%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* styling untuk button donate,learn more,dan contact us */
+.btn {
+  border-radius: 40px;
+  padding: 16px 50px;
+  transition: 400ms;
+}
+
+      /* styling untuk button donate */
+      .btn-primary {
+        background: #3DB5E2;
+        color: white 
+      }
+      
+      .btn-primary:hover {
+        background: rgb(38, 143, 182);
+      }
+
+      .btn-primary:active {
+        color: #fdcc52;
+        font-weight: bolder;
+      }
+
+
+
+      /* styling untuk button learn more */
+      .btn-secondary {
+        background: white;
+        color: #3274CC;
+        font-weight: bold;
+      }
+
+      .btn-secondary:hover {
+        background: purple;
+        color: white;
+      }
+
+      .btn-secondary:active {
+      background: pink;
+      color: #fdcc52;
+      font-weight: bolder; 
+      }
+
+      /* styling untuk button contact us */
+      .btn-transparent {
+        background: transparent;
+        border: 2px solid #fff;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .btn-transparent:hover {
+        background: purple;
+        color: white;
+        border: 2px solid rgb(228, 32, 228);
+      }
+
+      .btn-transparent:active {
+        background: pink;
+        color: #fdcc52;
+        font-weight: bolder; 
+        }
+
+/* styling untuk class text center (pada bagian what must we do dan kartu langkah langkah ) */
+.text-center {
+  text-align: center;
+}
+
+/* What Must We Do */
+.what-must-we-do {
+  padding: 140px 0;
+}
+
+      .what-must-we-do h2 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 80px;
+      }
+
+      .what-must-we-do .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .what-must-we-do .card {
+        margin-right: 56px;
+      }
+
+      .what-must-we-do .card:last-child {
+        margin-right: 0;
+      }
+
+
+
+
+/* styling untuk (class) Card */
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  width: 232px;
+  min-height: 300px;
+  padding: 20px 16px;
+}
+
+      .card .card-body {
+        margin-top: 27px;
+      }
+
+      .card .card-body span {
+        width: 200px;
+      }
+
+      .card .card-title h3 {
+        margin-top: 15px;
+      }
+
+      .card .card-title img:hover {
+
+        animation: animation 500ms  infinite;
+
+      }
+
+      @keyframes animation {
+
+        50% {
+
+          transform: rotateZ(-10deg);
+
+      }
+
+
+
+      100% {
+
+          transform: rotateZ(10deg);
+
+      }
+
+      }
+
+
+
+/* styling untuk teks paragraf */
+p {
+  font-size: 16px;
+}
+
+
+/* Footer */
+footer {
+  padding: 24px;
+  background:#F7F7F7; ;
+}
+
+
+/* tampilan handphone */
+@media (max-width: 1000px) {
+        .home {
+            background-position: -550px 0;
+        }
+
+        .home .illustration {
+            display: none;
+        }
+        
+        header .main-nav .nav-item {
+          display: none;
+        }
+
+        header .main-nav .nav-item:hover::before {
+            width: 0;
+        }
+
+        header .main-nav .nav-item:hover:last-child {
+            background: transparent;
+        }
+
+        header .main-nav .nav-item-btn {
+          display: none;
+        }
+
+        .home .content h1 {
+            font-size: 32px;
+        }
+
+        .home .content p {
+            font-size: 14px;
+        }
+
+        .what-must-we-do .content {
+            flex-direction: column;
+        }
+
+        .what-must-we-do .card {
+            margin-right: 0;
+            margin-bottom: 16px;
+        }
+
+        .what-must-we-do h2 {
+            font-size: 28px;    
+        }
+}
+
+
